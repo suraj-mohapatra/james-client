@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.uglyeagle</groupId>
@@ -18,7 +19,25 @@
     </properties>
     
     <dependencies>
-
+        <dependency>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
+            <version>2.1.5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-mail</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+        
+        <!-- to use this implementation also use jakarta.mail-api version 2.0.2 -->
+        <!--<dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>2.0.2</version>
+        </dependency>-->
+        
     </dependencies>
     
     <build>
@@ -32,7 +51,7 @@
                     <release>17</release> <!-- this setting overrides the below 2 -->
                     <!--<source>${maven.compiler.source}</source>-->
                     <!--<target>${maven.compiler.target}</target>-->
-                    <fork>true</fork>
+                    <!--<fork>true</fork>-->
                 </configuration>
             </plugin>
             
